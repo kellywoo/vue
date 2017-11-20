@@ -1,0 +1,18 @@
+<head></head>
+<body>
+<script>
+  var a = {
+    c: 3,
+    flag: true,
+    b: function bb (p) {
+      console.log(p,this);
+      if ( a.flag ) {
+        a.flag = false;
+        a.b('a.b=');
+        bb('bb=');
+      }
+    }
+  }
+  a.b('first');
+</script>
+</body>
